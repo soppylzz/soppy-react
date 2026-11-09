@@ -5,6 +5,7 @@ Start with the [repository context](.agents/context.md). Then open the guidance 
 | Task | Read |
 | --- | --- |
 | Trace upstream behavior, write a study note, or implement an experiment | [Source study](.agents/roles/source-study.md) |
+| Write or revise a learning document under `docs/` | [Documentation](.agents/rules/docs.md) and [Source study](.agents/roles/source-study.md) |
 | Change a dependency, config, script, or Git hook | [Tooling](.agents/roles/tooling.md) |
 | Update either root README | Compare both language editions and follow the [verification rules](.agents/rules/verification.md) |
 

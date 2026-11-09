@@ -1,0 +1,17 @@
+{
+  "name": "@soppy-react/play",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@soppy-react/react": "workspace:*"
+  },
+  "devDependencies": {
+    "@soppy-react/build": "workspace:*",
+    "vite": "8.3.5"
+  }
+}

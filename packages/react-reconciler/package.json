@@ -1,0 +1,36 @@
+{
+  "name": "@soppy-react/react-reconciler",
+  "version": "0.0.0",
+  "description": "Reconciler for the Soppy React learning implementation.",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soppylzz/soppy-react.git",
+    "directory": "packages/react-reconciler"
+  },
+  "author": "soppylzz",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch --mode development",
+    "prepack": "pnpm build"
+  },
+  "devDependencies": {
+    "vite": "8.3.5",
+    "@soppy-react/build": "workspace:*"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ]
+}

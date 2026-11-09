@@ -1,0 +1,46 @@
+{
+  "name": "@soppy-react/react-dom",
+  "version": "0.0.0",
+  "description": "Browser DOM renderer for the Soppy React learning implementation.",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soppylzz/soppy-react.git",
+    "directory": "packages/react-dom"
+  },
+  "author": "soppylzz",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch --mode development",
+    "prepack": "pnpm build"
+  },
+  "devDependencies": {
+    "vite": "8.3.5",
+    "@soppy-react/build": "workspace:*"
+  },
+  "main": "./dist/client.cjs",
+  "module": "./dist/client.js",
+  "exports": {
+    ".": {
+      "import": "./dist/client.js",
+      "require": "./dist/client.cjs"
+    },
+    "./client": {
+      "import": "./dist/client.js",
+      "require": "./dist/client.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@soppy-react/react-reconciler": "workspace:*"
+  },
+  "peerDependencies": {
+    "@soppy-react/react": "workspace:*"
+  }
+}

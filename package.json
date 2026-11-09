@@ -17,8 +17,9 @@
     "prepare": "husky",
     "changeset": "changeset",
     "version-packages": "changeset version && pnpm install --lockfile-only",
-    "release": "changeset publish",
-    "commit": "cz"
+    "release": "pnpm build && changeset publish",
+    "commit": "cz",
+    "build": "pnpm -r --if-present build"
   },
   "devDependencies": {
     "@changesets/changelog-github": "1.0.1",

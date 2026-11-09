@@ -1,0 +1,43 @@
+{
+  "name": "@soppy-react/react",
+  "version": "0.0.0",
+  "description": "A small React implementation for studying React 18.",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soppylzz/soppy-react.git",
+    "directory": "packages/react"
+  },
+  "author": "soppylzz",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@soppy-react/shared": "workspace:*"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch --mode development",
+    "prepack": "pnpm build"
+  },
+  "devDependencies": {
+    "vite": "8.3.5",
+    "@soppy-react/build": "workspace:*"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./jsx-dev-runtime": {
+      "import": "./dist/jsx-dev-runtime.js",
+      "require": "./dist/jsx-dev-runtime.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ]
+}
