@@ -32,5 +32,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "@soppy-react/scheduler": "workspace:*"
+  }
 }

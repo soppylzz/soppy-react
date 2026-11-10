@@ -12,7 +12,7 @@ class FiberRootNode {
 }
 
 export function createFiberRoot(containerInfo) {
-  // Notice: root node has real DOM from the very beginning, not hold a VNode
+  // NOTICE: root node has real DOM from the very beginning, not hold a VNode
   const root = new FiberRootNode(containerInfo)
 
   const uninitializedFiber = createHostRootFiber()

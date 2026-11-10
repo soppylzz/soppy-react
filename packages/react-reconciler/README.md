@@ -1,5 +1,5 @@
 # @soppy-react/react-reconciler
 
-This package exports `createContainer` for renderers. It currently creates an internal root holding the supplied `containerInfo`. Scheduling, reconciliation, and committing updates are pending implementation.
+Use this package to trace a root update from the shared update queue through the Fiber work loop. The scheduler starts a synchronous render pass. `beginWork` reconciles host elements and text, and `completeWork` assembles detached nodes and bubbles mutation flags.
 
-`createFiberRoot` remains an internal factory. The package currently has no runtime dependencies.
+During commit, `commitRoot` applies deletions, placements, and updates before switching the current tree. The renderer supports HTML elements, text, and flat child arrays, including moves of keyed siblings.

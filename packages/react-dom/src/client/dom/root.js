@@ -1,8 +1,17 @@
-import { createContainer } from "@soppy-react/react-reconciler"
+import { createContainer, updateContainer } from "@soppy-react/react-reconciler"
 
 class ReactDOMRoot {
   constructor(/* FiberRootNode */ internalRoot) {
     this._internalRoot = internalRoot
+  }
+
+  render(children) {
+    const root = this._internalRoot
+    if (root === null) {
+      throw new Error("Cannot update an unmounted root")
+    }
+
+    updateContainer(children, root, null, null)
   }
 }
 

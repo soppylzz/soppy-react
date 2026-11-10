@@ -51,11 +51,11 @@ const ReactElement = function (type, key, ref, self, source, owner, props) {
 export function jsxDEV(type, config, maybeKey, source, self) {
   const props = {}
 
-  let key = null
+  let key = maybeKey === undefined ? null : String(maybeKey)
   let ref = null
 
   if (hasValidKey(config)) {
-    key = config.key
+    key = String(config.key)
   }
   if (hasValidRef(config)) {
     ref = config.ref

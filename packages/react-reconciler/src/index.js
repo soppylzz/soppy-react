@@ -1,1 +1,1 @@
-export { createContainer } from "./fiber"
+export { createContainer, updateContainer } from "./fiber"
